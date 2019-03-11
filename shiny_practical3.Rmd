@@ -1,0 +1,22 @@
+---
+title: "BIO8068 Data visualisation and management in ecology"
+author: "Roy Sanderson"
+subtitle: Further shiny development
+output:
+  word_document: 
+    reference_docx: word_template.docx
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 1. Introduction
+When designing and writing shiny applications it is easy to become confused by the R code, as the code in the user-interface (`ui`) and `server` functions is difficult to debug. The simplest approach is to compartmentalise different tasks, testing them in standard R scripts, and either calling these at the start of the main `app.R` code using the `source` function to setup various initial parameters, creating functions than can be re-used later, or integrating them into the `server` code once you know the original R code is robust. Good coding practices will help you do this effectively and well. Finally, you want others to be able to use your shiny app, so you have to know how to publish it on the web. The main aims of this practical are to:
+
+* learn how to plan a shiny app, how to structure and test it
+* good coding practice, shiny reactive programming
+* publishing your app on the web
+
+## 2. Planning your shiny app
