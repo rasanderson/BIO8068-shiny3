@@ -1,0 +1,10 @@
+name: shiny_practical3
+title:
+username:
+account: mep-ncl
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 787182
+bundleId: 1936809
+url: https://mep-ncl.shinyapps.io/shiny_practical3/
+when: 1552491938.68459
