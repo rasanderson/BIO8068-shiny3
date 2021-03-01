@@ -1,7 +1,6 @@
 ---
-title: "BIO8068 Data visualisation and management in ecology"
-author: "Roy Sanderson"
-subtitle: Further shiny development
+title: Further shiny development
+subtitle: "BIO8068 Data visualisation and management in ecology"
 output:
   word_document:
     reference_docx: word_template.docx
@@ -34,11 +33,11 @@ Spend some time thinking carefully about the user interface (UI) part of your ap
 * Decide whether you want a long-style of website or a dashboard. An example long-style website is that of the USGS Biological Monitoring Station at Lake Erie <https://gallery.shinyapps.io/lake_erie_fisheries_stock_assessment_app/>. This is a single long page, with all the different graphical interfaces visible as you scroll down. Dashboards are more difficult to code, requiring the use of the `shinydashboard` add-on package <https://rstudio.github.io/shinydashboard/index.html>. As this is more complex, have a look at some of the examples before deciding whether to go down this route.
 
 ## 4. Testing your prototype
-It is difficult to test a prototype user-interface without having all the server components written already, which can be frustrating if you want to focus on the user-interface design initially. The `shinipsum` package comes with random plots, images, tables of data etc. that you can use in an interface, without needing to worry about the detail of the backend. The package is not available (yet) on CRAN but can be installed from github:
+It is difficult to test a prototype user-interface without having all the server components written already, which can be frustrating if you want to focus on the user-interface design initially. The `shinipsum` package comes with random plots, images, tables of data etc. that you can use in an interface, without needing to worry about the detail of the backend. The package is now available on CRAN:
 
 ```{r installing shinipsum, eval=FALSE}
 # Note: installing shinipsum will also install lots of extra packages
-remotes::install_github("Thinkr-open/shinipsum")
+install.packages("shinipsum")
 ```
 
 You can then experiment by creating a very simple shiny app with some random components. This one creates a user-interface with an image, a ggplot, some printed output, a table, and some text. Obviously, the values and contents are random.
@@ -48,15 +47,15 @@ library(shiny)
 library(shinipsum)
 library(ggplot2)
 ui <- fluidPage(
-  h2("A Random Image"),
+  h2("A little random image"),
   plotOutput("image", height = "300px"),
-  h2("A Random Plot"),
+  h2("Some sort of plot"),
   plotOutput("plot"),
-  h2("A Random Print"),
+  h2("A Random Print statement"),
   verbatimTextOutput("print"),
   h2("A Random Table"),
   tableOutput("table"),
-  h2("A Random Text"),
+  h2("A bit of random Text"),
   tableOutput("text")
 )
 
